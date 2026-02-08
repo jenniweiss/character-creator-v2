@@ -1,13 +1,24 @@
 .characterEditor {
   padding-top: 128px;
   padding-bottom: 64px;
+  position: relative;
+  @media (max-width: 440px) {
+     padding-top: 0px;
+     padding-bottom: 0px;
+  }
+
 }
 
 .maxWidthWrapper {
+  position: relative;
 }
 
 .header {
   padding-bottom: 64px;
+  width: 65%;
+  @media (max-width: 440px) {
+     display: none;
+  }
 }
 
 .title {
@@ -24,7 +35,46 @@
 }
 
 .characterWrapper {
+  position: fixed;
+  right: -75px;
+  top: 128px;
+  width: 45%;
+  min-height: 500px;
+  @media (max-width: 440px) {
+    width: 100%;
+    top: 8px;
+    left: 32px;
+  }
 }
 
 .controlColumn {
+  width: 50%;
+  @media (max-width: 440px) {
+    position: fixed;
+    bottom: 5em;
+    display: flex;
+    width: 80%;
+    gap: 16px;
+    overflow-x: auto;
+    z-index: 2;
+  }
 }
+.perspective {
+  height: 41%;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: hsl(195deg, 20%, 86%);
+  @media (max-width: 440px) {
+     display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
